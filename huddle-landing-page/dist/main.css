@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #674baf;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  padding: 2rem;
+}
+
+header .logo {
+  width: 150px;
+}
+
+main {
+  z-index: 5;
+  padding: 2rem;
+}
+
+.text {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.text h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+footer i {
+  margin: 0 .5rem;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+footer i:hover {
+  color: #e882e8;
+}
+
+footer .attribution {
+  font-size: .8em;
+}
+
+.bg-mobile {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -5;
+}
+
+.bg-desktop {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -5;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #e882e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: white;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  color: #674baf;
+  border: none;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: inherit;
+  padding: .8rem 5rem;
+  margin: 1rem;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.btn:hover {
+  background-color: #e882e8;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    padding: 2.5rem 4rem;
+  }
+  footer {
+    right: 0;
+    padding: 2rem 4rem;
+  }
+  .text {
+    text-align: start;
+    max-width: 500px;
+  }
+  .text h1 {
+    font-size: 2.5em;
+  }
+  .btn {
+    margin: .5rem 0;
+  }
+  .bg-mobile {
+    display: none;
+  }
+  .bg-desktop {
+    display: block;
+  }
+}
+/*# sourceMappingURL=main.css.map */
