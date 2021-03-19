@@ -1,0 +1,136 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+    font-size: $fontSize;
+    line-height: 1.2;
+    background-color: $lightBlue;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    ;
+    gap: 25px;
+}
+
+.testimonial {
+    background-color: red;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+
+    &__profile {
+        display: flex;
+        align-items: center;
+    }
+
+    &__photo {
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__info {
+        margin-left: 1rem;
+    }
+
+    &__name {
+        font-size: $fontBold;
+    }
+
+    &__status {
+        font-size: $fontNormal;
+        font-size: 0.8em;
+        opacity: 0.5;
+    }
+
+    &__title {
+        z-index: 10;
+    }
+
+    &__paragraph {
+        line-height: 1.5;
+        font-weight: $fontNormal;
+        opacity: 0.7;
+    }
+}
+
+.violet {
+    position: relative;
+    background-color: $violet;
+    color: $white;
+    grid-area: a;
+
+    .illustration {
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        right: 25px;
+    }
+}
+
+.grayish-blue {
+    background-color: $grayishBlue;
+    color: $white;
+    grid-area: b;
+}
+
+.white {
+    background-color: $white;
+    color: $blackishBlue;
+    grid-area: c;
+
+    &-two {
+        grid-area: e;
+    }
+}
+
+.blackish-blue {
+    background-color: $blackishBlue;
+    color: $white;
+    grid-area: d;
+}
+
+.attribution {
+    text-align: center;
+    margin: 2rem;
+    opacity: 0.8;
+
+    a {
+        color: $violet;
+        text-decoration: none;
+        &:visited {
+            color: $violet;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        grid-template-areas:
+        "a a b e"
+        "c d d e"
+        ;
+    }
+}
