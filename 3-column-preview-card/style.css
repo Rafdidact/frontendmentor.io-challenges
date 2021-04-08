@@ -1,0 +1,139 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --font-Lexend: 'Lexend Deca', sans-serif;
+    --font-Big-Shoulders: 'Big Shoulders Display', cursive;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-Lexend);
+    color: var(--very-light-gray);
+}
+
+main {
+    width: 85%;
+    max-width: 780px;
+    margin: 5rem auto;
+}
+
+.cards-wrapper {
+    border-radius: 25px;
+    display: grid;
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    ;
+}
+
+.cards-wrapper > .card {
+    margin: 0;
+    padding: 2.5rem;
+}
+
+.cards-wrapper > .card.bright-orange {
+    background-color: var(--bright-orange);
+    border-radius: 8px 8px 0 0;
+    grid-area: a;
+}
+
+.cards-wrapper > .card.dark-cyan {
+    background-color: var(--dark-cyan);
+    grid-area: b;
+}
+
+.cards-wrapper > .card.very-dark-cyan {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 8px 8px;
+    grid-area: c;
+}
+
+.cards-wrapper > .card > .title {
+    font-family: var(--font-Big-Shoulders);
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+}
+
+.cards-wrapper > .card > .para {
+    color: var(--transparent-white);
+    line-height: 1.8;
+    font-size: 0.8em;
+}
+
+.cards-wrapper > .card > .btn {
+    font-family: inherit;
+    background-color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    border-radius: 25px;
+    margin: 1rem 0 0 0;
+    padding: .8rem 1.8rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.cards-wrapper > .card.bright-orange > .btn {
+    color: var(--bright-orange);
+}
+
+.cards-wrapper > .card.dark-cyan > .btn {
+    color: var(--dark-cyan);
+}
+
+.cards-wrapper > .card.very-dark-cyan > .btn {
+    color: var(--very-dark-cyan);
+}
+
+.cards-wrapper > .card > .btn:hover {
+    background-color: transparent;
+    color: var(--transparent-white);
+}
+
+.attribution {
+    padding: 2rem;
+    color: gray;
+}
+
+.attribution > a {
+    color: black;
+}
+
+.attribution > a:visited {
+    color: black;
+}
+
+.attribution > a:hover {
+    color: var(--bright-orange);
+}
+
+@media only screen and (min-device-width: 1024px) {
+    .cards-wrapper {
+        grid-template-areas:
+        "a b c"
+        ;
+    }
+
+    .cards-wrapper > .card.bright-orange {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .cards-wrapper > .card.very-dark-cyan {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .cards-wrapper > .card > .para {
+        margin: 1rem 0 2.5rem 0;
+    }
+}
