@@ -99,6 +99,7 @@ body {
     text-align: center;
     padding: 2rem;
     font-size: 0.8em;
+    opacity: 0.85;
 }
 
 .attribution > a {
@@ -117,12 +118,21 @@ body {
 }
 
 @media only screen and (min-device-width: 768px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .card {
+        transform: translateY(-50px);
         grid-template-columns: 1fr 1fr;
+        margin: 0;
     }
 
     .card > .text-wrapper {
-        padding: 4rem 6rem 4rem 4rem;
+        padding: 3rem 5rem 3rem 3rem;
         text-align: start;
     }
 
@@ -148,5 +158,11 @@ body {
 
     .card > .text-wrapper > .stat-wrapper > .stat:not(:last-child) {
         margin: 0 2rem 0 0;
+    }
+
+    .attribution {
+        position: absolute;
+        padding: 0;
+        bottom: 2rem;
     }
 }
