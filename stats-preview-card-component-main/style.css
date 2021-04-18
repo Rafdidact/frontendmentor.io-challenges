@@ -26,6 +26,8 @@ body {
 }
 
 .card {
+    display: grid;
+    grid-template-rows: auto auto;
     background-color: var(--dark-desaturated-blue);
     width: 80%;
     max-width: 1000px;
@@ -33,15 +35,29 @@ body {
     border-radius: 10px;
 }
 
-.card > .img-wrapper {
+.card > .img-wrapper-mobile {
+    display: block;
     border-radius: 10px 10px 0 0;
     background-color: var(--soft-violet);
 }
 
-.card > .img-wrapper > .header-mobile {
+.card > .img-wrapper-mobile > .header-mobile {
     display: block;
     opacity: 0.5;
     border-radius: 10px 10px 0 0;
+    max-width: 100%;
+}
+
+.card > .img-wrapper-desktop {
+    display: none;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--soft-violet);
+}
+
+.card > .img-wrapper-desktop > .header-desktop {
+    display: none;
+    opacity: 0.5;
+    border-radius: 0 10px 10px 0;
     max-width: 100%;
 }
 
@@ -60,8 +76,12 @@ body {
     line-height: 1.5;
 }
 
+.card > .text-wrapper > .stat-wrapper {
+    display: block;
+}
+
 .card > .text-wrapper > .stat-wrapper > .stat:not(:last-child) {
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
 }
 
 .card > .text-wrapper > .stat-wrapper > .stat > .stat-number {
@@ -74,12 +94,59 @@ body {
     font-size: 0.8em;
 }
 
-footer {
+.attribution {
     width: 100%;
     text-align: center;
     padding: 2rem;
+    font-size: 0.8em;
+}
+
+.attribution > a {
+    color: var(--soft-violet);
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.attribution > a:hover {
+    text-decoration: underline;
+    opacity: 1;
 }
 
 .highlight {
     color: var(--soft-violet);
+}
+
+@media only screen and (min-device-width: 768px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card > .text-wrapper {
+        padding: 4rem 6rem 4rem 4rem;
+        text-align: start;
+    }
+
+    .card > .img-wrapper-mobile {
+        display: none;
+    }
+
+    .card > .img-wrapper-mobile > .header-mobile {
+        display: none;
+    }
+
+    .card > .img-wrapper-desktop {
+        display: block;
+    }
+
+    .card > .img-wrapper-desktop > .header-desktop {
+        display: block;
+    }
+
+    .card > .text-wrapper > .stat-wrapper {
+        display: flex;
+    }
+
+    .card > .text-wrapper > .stat-wrapper > .stat:not(:last-child) {
+        margin: 0 2rem 0 0;
+    }
 }
