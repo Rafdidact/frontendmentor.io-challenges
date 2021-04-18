@@ -91,6 +91,7 @@ body {
 .card > .text-wrapper > .stat-wrapper > .stat > .stat-descrip {
     color: var(--slightly-transparent-white-2);
     text-transform: uppercase;
+    font-family: var(--font-Lexend);
     font-size: 0.8em;
 }
 
@@ -131,11 +132,6 @@ body {
         margin: 0;
     }
 
-    .card > .text-wrapper {
-        padding: 3rem 5rem 3rem 3rem;
-        text-align: start;
-    }
-
     .card > .img-wrapper-mobile {
         display: none;
     }
@@ -150,6 +146,14 @@ body {
 
     .card > .img-wrapper-desktop > .header-desktop {
         display: block;
+    }
+
+    .card > .text-wrapper {
+        padding: 3rem 5rem 3rem 3rem;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .card > .text-wrapper > .stat-wrapper {
