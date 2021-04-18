@@ -1,2 +1,2 @@
-# frontendmentor.io-challenges
-Front-end challenges from frontendmentor.io I've completed.
+# frontendmentor.io-challenges #01
+Front-end challenges from frontendmentor.io I've completed part #01.
